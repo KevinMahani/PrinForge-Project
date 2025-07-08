@@ -28,24 +28,24 @@ export type GetModelsParams = {
 export type CategoryPageProps = {
     params: Promise<{
         categoryName: string
-    }>;
-};
+    }>
+}
 
 export type RootLayoutProps = Readonly<{
     children: React.ReactNode;
 }>
 
 export type ModelsPageProps = {
-    searchParams?: Promise<{
-        query?: string
-    }>
+    searchParams: {
+        q?: string
+    }
 }
 
 export type ModelDetailPageProps = {
     params: Promise<{
-        id: string;
-    }>;
-};
+        id: string
+    }>
+}
 
 // Components Types
 export type ModelCardProps = {
