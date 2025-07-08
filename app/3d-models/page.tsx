@@ -58,7 +58,6 @@
 
 // PrintForge - Upgrade to Next's Form Component
 
-import Form from "next/form"
 
 import ModelsGrid from "@/app/components/ModelsGrid"
 import type { ModelsPageProps } from "@/app/types"
@@ -77,7 +76,7 @@ export default async function Page({ searchParams }: ModelsPageProps) {
 
     return (
         <>
-            <Form action="/3d-models" className="w-full px-5 md:px-0 md:max-w-xl">
+            <form action="/3d-models" className="w-full px-5 md:px-0 md:max-w-xl">
                 <input
                     type="text"
                     name="query"
@@ -86,7 +85,7 @@ export default async function Page({ searchParams }: ModelsPageProps) {
                     defaultValue={query}
                     className="w-full py-3 pl-5 pr-5 text-sm placeholder-gray-500 bg-white border border-[#606060] rounded-full focus:border-[#606060] focus:outline-none focus:ring-0 md:text-base"
                 />
-            </Form>
+            </form>
             <ModelsGrid title="3D Models" models={filteredModels} />
         </>
     )
